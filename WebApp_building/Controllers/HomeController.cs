@@ -10,14 +10,14 @@ namespace WebApp_building.Controllers
 
         public HomeController(ILogger<HomeController> logger)
         {
-            _logger = logger;
+            _logger = logger; //sdfdsf
         }
 
         public IActionResult Index()
         {
             return View();
         }
-
+     
         public IActionResult Privacy()
         {
             return View();
