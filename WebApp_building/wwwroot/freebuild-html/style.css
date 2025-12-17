@@ -1883,3 +1883,52 @@ li.product-thumb.nav-item .nav-tabs .nav-link.active {
 .product-slide-nav.nav li {
     margin-right: 20px;
 }
+.single-contact-info {
+    background: rgba(255, 255, 255, 0.1); /* Yarı saydam beyaz arka plan */
+    padding: 30px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.4s ease;
+    height: 100%; /* Kutuların boyunu eşitler */
+}
+
+    .single-contact-info:hover {
+        background: #ffb600; /* Temanın sarı rengi (Hover olunca) */
+        transform: translateY(-10px); /* Yukarı doğru hareket */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        border-color: #ffb600;
+    }
+
+        .single-contact-info:hover h4,
+        .single-contact-info:hover p,
+        .single-contact-info:hover a,
+        .single-contact-info:hover i {
+            color: #fff !important; /* Hover olunca yazı rengi beyaz */
+        }
+
+.contact-icon i {
+    font-size: 40px;
+    color: #ffb600; /* İkon rengi */
+    margin-bottom: 20px;
+    transition: all 0.4s ease;
+}
+
+.contact-content h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.contact-content p, .contact-content a {
+    font-size: 15px;
+    color: #ddd;
+    margin: 0;
+    text-decoration: none;
+}
+
+.follow-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 18px;
+}
