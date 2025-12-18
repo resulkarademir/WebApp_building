@@ -1,28 +1,29 @@
-﻿<section class="about-us section-padding" id="service">
+﻿@model List<WebApp_building.DAL.Entities.Hizmetler>
+
+<section class="what-we-do-wrap section-padding" id="whatwedo">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 col-12 text-center">
-                <div class="theme-heading">
-                    <span>Uzmanlık Alanlarımız</span>
-                    <h2>Neler Yapıyoruz?</h2>
+            <div class="col-lg-10 offset-lg-1 col-12 text-center">
+                <div class="what-we-do-title">
+                    <span>Hizmetlerimiz</span>
+                    <h2>Yaşam alanlarınızı sanata dönüştüren profesyonel dokunuşlar sunuyoruz.</h2>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-3 col-sm-6 text-center">
-                <div class="single-about">
-                    <img src="~/freebuild-html/assets/img/icons/1.png" alt="">
-                    <h3>Tadilat</h3>
-                    <a href="#"><i class="fal fa-long-arrow-right"></i></a>
+           
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-3 col-sm-6 text-center">
+                    <div class="single-we-do">
+                        <img src="@item.Image" alt="">
+                        <h3>@item.ImageTitle</h3>
+                        <p>@item.ImageDescription</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 text-center">
-                <div class="single-about">
-                    <img src="~/freebuild-html/assets/img/icons/2.png" alt="">
-                    <h3>Dekorasyon</h3>
-                    <a href="#"><i class="fal fa-long-arrow-right"></i></a>
-                </div>
-            </div>
+            }
+            
+       
         </div>
     </div>
 </section>

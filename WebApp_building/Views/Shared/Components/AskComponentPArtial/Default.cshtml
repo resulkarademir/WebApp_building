@@ -1,0 +1,52 @@
+﻿@model List<WebApp_building.DAL.Entities.Ask>
+
+<section class="fq-ask section-padding"id="ask">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12">
+                <div class="fq-ask-banner">
+                    <img src="~/freebuild-html/assets/img/fq-ask.jpg" />
+                 
+                </div>
+            </div> <!-- /.col-lg-6 col-sm-12 -->
+            <div class="col-lg-6 col-sm-12">
+                <div class="theme-heading">
+                    <span>Some FAQ’s</span>
+                    <h2>Fequality Ask <br>Question</h2>
+                </div>
+                <div class="frequent-ask-accrodian">
+                    <div id="accordion">
+
+                        @foreach (var item in Model)
+                        {
+                            <div class="card">
+                                <div class="card-header" id="heading_@item.Id">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed"
+                                                data-toggle="collapse"
+                                                data-target="#collapse_@item.Id"
+                                                aria-expanded="false"
+                                                aria-controls="collapse_@item.Id">
+                                            @item.AskTitle
+                                        </button>
+                                    </h5>
+                                </div>
+
+                                <div id="collapse_@item.Id"
+                                     class="collapse"
+                                     aria-labelledby="heading_@item.Id"
+                                     data-parent="#accordion">
+                                    <div class="card-body">
+                                        @item.AskAnswer
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                
+                  
+                    </div>
+                </div>
+            </div> <!-- /.col-lg-6 col-sm-12 -->
+        </div>
+    </div>
+</section>

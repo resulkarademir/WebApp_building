@@ -1,28 +1,23 @@
-﻿<section class="hero-slider-area slider-home-two">
+﻿@model List<WebApp_building.DAL.Entities.Feature>
+
+<section class="hero-slider-area slider-home-two">
     <div class="hero-slide-active owl-carousel">
-        <div class="single-hero-slide bg-cover bg-center text-white dark-overlay d-flex align-items-center" style="background-image: url('@Url.Content("~/freebuild-html/assets/img/slide/slide1.jpg")')">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-11 col-12 col-lg-10 wow fadeInUp" data-wow-duration="2s">
-                        <span>İç Mimarlık & Dekorasyon</span>
-                        <h2>Mekanlarınıza Estetik ve <br>Konfor Katıyoruz</h2>
-                        <p>Modern asma tavan sistemleri ve dekoratif çözümlerle hayalinizdeki yaşam alanlarını tasarlıyoruz.</p>
-                        <a href="#contact" class="theme_btn get_start">Teklif Alın</a>
+        @foreach (var item in Model)
+        {
+            <div class="single-hero-slide bg-cover bg-center text-white dark-overlay d-flex align-items-center" style="background-image: url('@Url.Content(item.Image)')">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-11 col-12 col-lg-10 wow fadeInUp" data-wow-duration="2s">
+                            <span>@item.Title</span>
+                            <h2>@item.Description</h2>
+                            <p>@item.Description2</p>
+                            <a href="#contact" class="theme_btn get_start">@item.Button</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="single-hero-slide bg-cover bg-center text-white dark-overlay d-flex align-items-center" style="background-image: url('@Url.Content("~/freebuild-html/assets/img/slide/s1.jpg")')">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-11 col-12 col-lg-10 wow fadeInUp" data-wow-duration="2s">
-                        <span>Profesyonel İşçilik</span>
-                        <h2>Hayallerinizi <br>Tavana İşliyoruz</h2>
-                        <p>Kaliteli malzeme, usta işçilik ve zamanında teslimat garantisi.</p>
-                        <a href="#portfolio" class="theme_btn get_start">Projelerimiz</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+        }
+       
     </div>
 </section>
