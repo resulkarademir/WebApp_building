@@ -16,6 +16,8 @@ namespace WebApp_building.DAL.Context
         public DbSet<NedenBiz> NedenBizs { get; set; }
         public DbSet<Referanslar> Referanslars { get; set; }
         public DbSet<Ask> Asks { get; set; }
-     
+        public DbSet<Login> Logins { get; set; }
+
+
     }
 }

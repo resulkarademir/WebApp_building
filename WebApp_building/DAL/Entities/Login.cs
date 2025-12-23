@@ -1,0 +1,13 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace WebApp_building.DAL.Entities
+{
+    public class Login
+    {
+        [Key]
+        public int UserId { get; set; }
+        public string UserName { get; set; }
+        public string UserPassword { get; set; }
+        public string UserMail { get; set; }
+    }
+}
