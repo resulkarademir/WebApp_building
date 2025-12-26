@@ -1,8 +1,69 @@
-﻿
+﻿@model List<WebApp_building.DAL.Entities.Feature>
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "ExperienceList";
     Layout = "~/Views/Layout/Index.cshtml";
 }
 
-<h1>Index</h1>
+<div class="main-panel">
+    <div class="content">
+        <div class="container-fluid">
+            <h4 class="page-title">Slider</h4>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Slider List</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-sub">
+                                You can perform Slider-related operations below:
+                            </div>
 
+                            <!-- Scrollable tablo kapsayıcısı -->
+                            <div class="table-responsive">
+                                <table class="table mt-3 table-bordered table-striped align-middle">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Title</th>
+                                            <th>İcon</th>
+                                            <th>Delete</th>
+                                            <th>Update</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>@item.FeatureId</td>
+                                                <td>@item.Title</td>
+                                                <td>@item.Image</td>
+                                                <td>@item.Description</td>
+                                                <td>@item.Description2</td>
+                                                <td>@item.Button</td>
+
+
+                                                <td>
+                                                    <a class="btn btn-danger btn-sm" href="/Feature/FeatureSil/@item.FeatureId">Delete</a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-success btn-sm" href="/Feature/FeatureGuncelle/@item.FeatureId">Update</a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <a href="/Feature/FeatureEkle" class="btn btn-info mt-3">Add New Feature</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
