@@ -1,8 +1,66 @@
-﻿
+﻿@model List<Hizmetler>
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "ExperienceList";
     Layout = "~/Views/Layout/Index.cshtml";
 }
 
-<h1>Index</h1>
+<div class="main-panel">
+    <div class="content">
+        <div class="container-fluid">
+            <h4 class="page-title">HizmetLer</h4>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">HizmetLer List</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-sub">
+                                You can perform HizmetLer-related operations below:
+                            </div>
 
+                            <!-- Scrollable tablo kapsayıcısı -->
+                            <div class="table-responsive">
+                                <table class="table mt-3 table-bordered table-striped align-middle">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Image</th>
+                                            <th>ImageTitle</th>
+                                            <th>ImageDescription</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>@item.HizmetId</td>
+                                                <td>@item.Image</td>
+                                                <td>@item.ImageTitle</td>
+                                                <td>@item.ImageDescription</td>
+
+
+                                                <td>
+                                                    <a class="btn btn-danger btn-sm" href="/Hizmetler/HizmetSil/@item.HizmetId">Delete</a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-success btn-sm" href="/Hizmetler/HizmetGuncelle/@item.HizmetId">Update</a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <a href="/Hizmetler/HizmetEkle" class="btn btn-info mt-3">Add New Hizmet</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
