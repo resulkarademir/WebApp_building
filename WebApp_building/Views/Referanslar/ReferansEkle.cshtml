@@ -1,4 +1,4 @@
-﻿@model WebApp_building.DAL.Entities.Feature
+﻿@model WebApp_building.DAL.Entities.Referanslar
 @{
     ViewData["Title"] = "AboutCreate";
     Layout = "~/Views/Layout/Index.cshtml";
@@ -6,35 +6,32 @@
 <div class="main-panel">
     <div class="content">
         <div class="container-fluid">
-            <h4 class="page-title">Feature</h4>
+            <h4 class="page-title">Referanslar</h4>
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <div class="card-title">Feature List</div>
+                            <div class="card-title">Referans List</div>
                         </div>
                         <div class="card-body">
 
                             <form method="post">
-                                <input type="hidden" asp-for="FeatureId" />
 
-                                <label>Feature Title</label>
+                                <label>Referans Title</label>
                                 <input type="text" asp-for="Title" class="form-control" />
                                 <br />
-                                <label>Feature Image</label>
-                                <input type="text" asp-for="Image" class="form-control" />
+                                <label>Referans Category</label>
+                                <input type="text" asp-for="Category" class="form-control" />
                                 <br />
-                                <label>Feature Description</label>
+                                <label>Referans Description</label>
                                 <input type="text" asp-for="Description" class="form-control" />
                                 <br />
-                                <label>Feature Description2</label>
-                                <input type="text" asp-for="Description2" class="form-control" />
-                                <br />
-                                <label>Feature Button</label>
-                                <input type="text" asp-for="Button" class="form-control" />
+                                <label>Referans Image</label>
+                                <input type="text" asp-for="Image" class="form-control" />
                                 <br />
 
-                                <button class="btn btn-primary"> Feature Add</button>
+
+                                <button class="btn btn-primary"> Referans Add</button>
                             </form>
 
 

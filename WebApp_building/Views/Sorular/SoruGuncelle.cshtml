@@ -1,4 +1,4 @@
-﻿@model WebApp_building.DAL.Entities.NedenBiz
+﻿@model WebApp_building.DAL.Entities.Ask
 @{
     ViewData["Title"] = "AboutCreate";
     Layout = "~/Views/Layout/Index.cshtml";
@@ -6,27 +6,27 @@
 <div class="main-panel">
     <div class="content">
         <div class="container-fluid">
-            <h4 class="page-title">Neden Biz?</h4>
+            <h4 class="page-title">Ask</h4>
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <div class="card-title">Neden Biz List</div>
+                            <div class="card-title">Ask List</div>
                         </div>
                         <div class="card-body">
 
                             <form method="post">
                                 <input type="hidden" asp-for="Id" class="form-control" />
 
-                                <label>Title</label>
-                                <input type="text" asp-for="Title" class="form-control" />
+                                <label>Ask Title</label>
+                                <input type="text" asp-for="AskTitle" class="form-control" />
                                 <br />
-                                <label>Description</label>
-                                <input type="text" asp-for="Description" class="form-control" />
+                                <label>Ask Answer </label>
+                                <input type="text" asp-for="AskAnswer" class="form-control" />
                                 <br />
 
 
-                                <button class="btn btn-primary"> Neden Biz Add</button>
+                                <button class="btn btn-primary"> Ask Add</button>
                             </form>
 
 
