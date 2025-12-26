@@ -1,8 +1,64 @@
-﻿
+﻿@model List<WebApp_building.DAL.Entities.NedenBiz>
 @{
-    ViewData["Title"] = "Index";
     Layout = "~/Views/Layout/Index.cshtml";
 }
 
-<h1>Index</h1>
+<div class="main-panel">
+    <div class="content">
+        <div class="container-fluid">
+            <h4 class="page-title">Neden Biz</h4>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Neden Biz List</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-sub">
+                                You can perform Neden Biz-related operations below:
+                            </div>
 
+                            <!-- Scrollable tablo kapsayıcısı -->
+                            <div class="table-responsive">
+                                <table class="table mt-3 table-bordered table-striped align-middle">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Image</th>
+                                            <th>ImageTitle</th>
+                                            <th>ImageDescription</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>@item.Id</td>
+                                                <td>@item.Title</td>
+                                                <td>@item.Description</td>
+
+
+                                                <td>
+                                                    <a class="btn btn-danger btn-sm" href="/NedenBiz/NedenBizSil/@item.Id">Delete</a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-success btn-sm" href="/NedenBiz/NedenBizGuncelle/@item.Id">Update</a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <a href="/NedenBiz/NedenBizEkle" class="btn btn-info mt-3">Add New NedenBiz</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
